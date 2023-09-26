@@ -10,7 +10,6 @@ const DarkModeButton = () => {
   useEffect(() => {
     const element = document.getElementById('main');
     setMounted(true)
-    setTheme(theme === 'dark' ? 'dark' : 'light');
   }, [])
 
   if (!mounted) {

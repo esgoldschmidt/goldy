@@ -39,12 +39,12 @@ function Resume({}: Props) {
                 <div className="mb-2 text-gray-700 dark:text-white bg-transparent" id='more_exp'>
                     <div id='broker'>
                         <div className="flex justify-between min-w-full">
-                            <h3 className='font-semibold'>Renting Brooklyn LLC (Individual Real Estate Brokerage) – New York, NY</h3>
-                            <h3 className='font-semibold'>2017 – 2020</h3>
+                            <h3 className='font-semibold'>Renting Brooklyn LLC (Individual Real Estate Brokerage) - New York, NY</h3>
+                            <h3 className='font-semibold'>2017 - 2020</h3>
                         </div>
                         <div className="flex justify-between">
                             <h4 className='italic'>Real Estate Broker</h4>
-                            <h4 className='italic'>12/17 – 03/20</h4>
+                            <h4 className='italic'>12/17 - 03/20</h4>
                         </div>
                         <ul className='mx-6'>
                             <li className='list-disc'>Full-Stack development experience implementing SQL databases, React.js and Node.js for the collection and maintenance of client details and property information</li>
@@ -53,16 +53,16 @@ function Resume({}: Props) {
                     </div>
                     <div className='py-4' id='office_manager'>
                         <div className="flex justify-between min-w-full">
-                            <h3 className='font-semibold'>Subway Realty Group (Real Estate Firm) – New York, NY</h3>
-                            <h3 className='font-semibold'>2013 – 2019</h3>
+                            <h3 className='font-semibold'>Subway Realty Group (Real Estate Firm) - New York, NY</h3>
+                            <h3 className='font-semibold'>2013 - 2019</h3>
                         </div>
                         <div className="flex justify-between">
                             <h4 className='italic'>Office Manager</h4>
-                            <h4 className='italic'>10/13 – 06/19</h4>
+                            <h4 className='italic'>10/13 - 06/19</h4>
                         </div>
                         <ul className='mx-6'>
                             <li className='list-disc'>Individually oversaw and signed over 250 property rentals generating  $700,000 gross revenue annually</li>
-                            <li className='list-disc'>Maintained  all functionality of firm’s website including developing an online tenant application and applicant tracking, featuring database design, graphic design, SSL and email notifications</li>
+                            <li className='list-disc'>Maintained  all functionality of firm&#39;s website including developing an online tenant application and applicant tracking, featuring database design, graphic design, SSL and email notifications</li>
                             <li className='list-disc'>Directly responsible for managing a 12 person team of agents</li>
                             <li className='list-disc'>Built custom dashboards in CRM to measure sales statistics</li>
                             <li className='list-disc'>Designed all branding materials including Logo, Website and all Marketing Materials using Adobe Suite</li>
@@ -70,21 +70,21 @@ function Resume({}: Props) {
                     </div>
                     <div id='marketing_sales'>
                         <div className="flex justify-between min-w-full">
-                            <h3 className='font-semibold'>Eventurous Inc. (Event Planning & Venue Management Firm) – Cincinnati, OH</h3>
-                            <h3 className='font-semibold'>2009 – 2013</h3>
+                            <h3 className='font-semibold'>Eventurous Inc. (Event Planning & Venue Management Firm) - Cincinnati, OH</h3>
+                            <h3 className='font-semibold'>2009 - 2013</h3>
                         </div>
                         <div className="flex justify-between">
                             <h4 className='italic'>Marketing & Sales Executive - Pinecroft at Crosley Estate (Event Venue)</h4>
-                            <h4 className='italic'>04/12 – 03/13</h4>
+                            <h4 className='italic'>04/12 - 03/13</h4>
                         </div>
                         <ul className='mx-6'>
                             <li className='list-disc'>Personally generated venue sales over $350,000 within first year of operation</li>
-                            <li className='list-disc'>Guaranteed over $2,000,000 in gross revenue for managing partner Funky’s Catering within 1 year</li>
+                            <li className='list-disc'>Guaranteed over $2,000,000 in gross revenue for managing partner Funky&#39;s Catering within 1 year</li>
                             <li className='list-disc'>Developed property website, using Wordpress, as primary source for information regarding rental of estate</li>
                         </ul>
                         <div className="flex justify-between">
                             <h4 className='italic'>Marketing & Business Development Strategist</h4>
-                            <h4 className='italic'>2009 –2012</h4>
+                            <h4 className='italic'>2009 - 2012</h4>
                         </div>
                         <ul className='mx-6'>
                             <li className='list-disc'>Implemented Infusionsoft, marketing and CRM program, reducing misallocation of human capital</li>
@@ -102,7 +102,7 @@ function Resume({}: Props) {
                             <h4 className='font-medium'>May 2020</h4>
                         </div>
                         <div className='flex justify-between'>
-                            <h4 className='font-medium'>Ohio State University – Max M. Fisher College of Business </h4>
+                            <h4 className='font-medium'>Ohio State University - Max M. Fisher College of Business </h4>
                             <h4 className='font-medium'>2009</h4>
                         </div>
                         <div className='flex justify-between -mt-1'>
@@ -124,15 +124,15 @@ function Resume({}: Props) {
                         <div id='body_experience'>
                             <h2 className='font-semibold text-lg'>Experience</h2>
                             <div className="flex justify-between min-w-full">
-                                <h3 className='font-semibold'>The Glimpse Group (Immersive Technologies) – New York, NY </h3>
-                                <h3 className='font-semibold'>2022 – 2023</h3>
+                                <h3 className='font-semibold'>The Glimpse Group (Immersive Technologies) - New York, NY </h3>
+                                <h3 className='font-semibold'>2022 - 2023</h3>
                             </div>
                             <div className="flex justify-between">
                                 <h4 className='italic'>Full-Stack Web Developer</h4>
-                                <h4 className='italic'>06/22 – 10/23</h4>
+                                <h4 className='italic'>06/22 - 10/23</h4>
                             </div>
                             <ul className='mx-6'>
-                                <li className='list-disc'>Responsible for the development and management of Full-Stack Web Applications for The Glimpse Group’s global marketing team featuring Next.js, a React|Node hybrid framework, written in JavaScript</li>
+                                <li className='list-disc'>Responsible for the development and management of Full-Stack Web Applications for The Glimpse Group&#39;s global marketing team featuring Next.js, a React|Node hybrid framework, written in JavaScript</li>
                                 <li className='list-disc'>Experience integrating headless CMS including Hygraph and databases such as MongoDB and PostgreSQL</li>
                                 <li className='list-disc'>Extensive experience using AWS services including Route53, Amplify, CloudFront, Lambda, S3 and SES</li>
                                 <li className='list-disc'>Comfortable implementing outside resources utilizing API including Insightly, Hygraph and Emailjs</li>
