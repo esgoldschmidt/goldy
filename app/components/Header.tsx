@@ -13,7 +13,7 @@ const Header = () => {
       <div className='h-18 relative'>
         <div className='flex justify-center gap-12 w-full p-3 uppercase'>
           <Link href="#about" className='ease duration-700 text-gold hover:-translate-y-1'>About</Link>
-          <Link href="#development" className='ease duration-700 text-gold hover:-translate-y-1'>&#60; Dev &#62;</Link>
+          <Link href="#development" className='ease duration-700 text-gold hover:-translate-y-1'>Development</Link>
           <Link href="#resume" className='ease duration-700 text-gold hover:-translate-y-1'>Résumé</Link>
           <Link href="#contact" className='ease duration-700 text-gold hover:-translate-y-1'>Contact</Link>
         </div>

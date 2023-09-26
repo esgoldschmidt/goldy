@@ -26,7 +26,7 @@ function Foot({}: Props) {
               About
             </Footer.Link>
             <Footer.Link href="#development" className='text-gold'>
-              &#60; Dev &#62;
+              Development
             </Footer.Link>
             <Footer.Link href="#resume" className='text-gold'>
               Résumé
