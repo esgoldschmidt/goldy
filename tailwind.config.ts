@@ -5,6 +5,7 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   darkMode: "class",
   theme: {
@@ -21,7 +22,7 @@ const config: Config = {
         '1.5': '1.5px',
       },
       colors: {
-        "gold": "#d4AF37",
+        "gold": "#bd9a2a",
         "forest": "#063821"
       },
       fontSize: {
@@ -111,6 +112,6 @@ const config: Config = {
 
     },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 }
 export default config

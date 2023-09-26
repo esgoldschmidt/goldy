@@ -8,16 +8,39 @@ const DarkModeButton = () => {
   const { theme, setTheme } = useTheme()
 
   useEffect(() => {
+    const element = document.getElementById('main');
     setMounted(true)
+    setTheme(theme === 'dark' ? 'dark' : 'light');
   }, [])
 
   if (!mounted) {
     return null
   }
 
+  
+
+  const submit = () => {
+    // Toggle theme between "light" and "dark"
+     // Get the element with id "main"
+     const element = document.getElementById('main');
+
+     // Add or remove the "dark" class based on the theme
+     if (element) {
+       if (theme === 'dark') {
+         element.classList.remove('dark');
+       } else {
+         element.classList.add('dark');
+       }
+     }
+
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+
+   
+  };
+
   return (
-    <button className='fixed right-4 bottom-4' onClick={e => theme === 'dark' ? setTheme('light') : setTheme('dark')}>
-        {theme === 'dark' ? <FaMoon /> : <FaSun />}
+    <button className='fixed right-4 bottom-4' onClick={submit}>
+        {theme === 'dark' ? <FaSun /> : <FaMoon />}
     </button>
   )
 }

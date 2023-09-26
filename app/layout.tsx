@@ -6,8 +6,8 @@ import { Providers } from './components/providers'
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Goldy | Dev by Eric Goldschidt',
-  description: 'Web Development by Eric Goldschmidt',
+  title: 'Goldy | Web Dev by Eric Goldschmidt',
+  description: 'Web Dev by Eric Goldschmidt',
 }
 
 export default function RootLayout({
@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" style={{scrollBehavior:'smooth'}}>
-      <body className={montserrat.className}>
+    <html lang="en" style={{scrollBehavior:'smooth'}}  id='main'>
+      <body className={`{montserrat.className} bg-white text-gray-700 dark:bg-gray-800 dark:text-white`}>
         <Providers>
           {children}
         </Providers> 

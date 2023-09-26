@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+  -ms-overflow-style: none;
+}
+
+hover:link{
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important; /* Remove underline on hover */
+}
+
+button{
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  margin-top: 1em;
+}
