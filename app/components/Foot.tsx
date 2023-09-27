@@ -22,16 +22,16 @@ function Foot({}: Props) {
         
            
           <Footer.LinkGroup className='flex gap-3 justify-center'>
-            <Footer.Link href="#about" className='text-gold link_no_under ease duration-700 hover:-translate-y-1'>
+            <Footer.Link href="#about" className='text-gold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] link_no_under ease duration-700 hover:-translate-y-1'>
               About
             </Footer.Link>
-            <Footer.Link href="#development" className='text-gold ease duration-700 hover:-translate-y-1'>
+            <Footer.Link href="#development" className='text-gold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] ease duration-700 hover:-translate-y-1'>
               Development
             </Footer.Link>
-            <Footer.Link href="#resume" className='text-gold ease duration-700 hover:-translate-y-1'>
+            <Footer.Link href="#resume" className='text-gold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] ease duration-700 hover:-translate-y-1'>
               Résumé
             </Footer.Link>
-            <Footer.Link href="#contact" className='text-gold ease duration-700 hover:-translate-y-1'>
+            <Footer.Link href="#contact" className='text-gold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] ease duration-700 hover:-translate-y-1'>
               Contact
             </Footer.Link>
           </Footer.LinkGroup>
@@ -41,7 +41,7 @@ function Foot({}: Props) {
           by="E. Goldschmidt"
           href="#"
           year={2023}
-          className='text-gold'
+          className='text-gold dark:text-gold uppercase [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]'
         />
       </div>
     </Footer>
