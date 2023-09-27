@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className="relative flex w-full overflow-hidden position-right">
       
-      <div className="z-10 w-full">
+      <div className="z-10 w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl overflow-hidden">
         <Flowbite>
           <Header />
           <About />
