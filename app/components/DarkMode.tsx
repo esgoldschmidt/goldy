@@ -38,7 +38,7 @@ const DarkModeButton = () => {
   };
 
   return (
-    <button className='fixed right-4 bottom-4 text-white' onClick={submit}>
+    <button className='fixed right-2 bottom-2 text-white' onClick={submit}>
         {theme === 'dark' ? <FaSun /> : <FaMoon />}
     </button>
   )

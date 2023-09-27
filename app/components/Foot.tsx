@@ -21,7 +21,7 @@ function Foot({}: Props) {
           </h1>
         
            
-          <Footer.LinkGroup>
+          <Footer.LinkGroup className='flex gap-3 justify-center'>
             <Footer.Link href="#about" className='text-gold link_no_under'>
               About
             </Footer.Link>

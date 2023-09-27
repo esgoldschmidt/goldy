@@ -4,7 +4,7 @@ type Props = {}
 
 function About({}: Props) {
   return (
-    <div className='flex flex-col gap-y-2 pb-12 w-full md:w-3/4' id="about">
+    <div className='p-3'>
         <h1 className='uppercase text-gold text-2xl'>About Eric</h1>
         <h2 className='text-cyan-600 dark:text-green-200'>My Curious Pursuit | A Journey in Tech</h2>
         <p >Hi. I&#39;m Eric. I design and develop web experiences that aim to simplify lives. 
@@ -24,6 +24,7 @@ function About({}: Props) {
         </p>
         <p>Let&#39;s connect, I&#39;d love to get started on our next big project</p>
     </div>
+    
   )
 }
 
