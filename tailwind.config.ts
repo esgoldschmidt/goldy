@@ -48,6 +48,8 @@ const config: Config = {
         '20': '88px',
       },
       maxWidth: {
+        "screen-xs": '480px',
+        "screen-xxs": '360px',
         '8xl': '88rem', // 1408px
         '9xl': '98rem', // 1568px
       },

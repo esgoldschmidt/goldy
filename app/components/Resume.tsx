@@ -38,11 +38,11 @@ function Resume({}: Props) {
                 <Accordion.Content className=' px-0'>
                 <div className="mb-2 text-gray-700 dark:text-white" id='more_exp'>
                     <div id='broker'>
-                        <div className="flex justify-between min-w-full">
+                        <div className="flex flex-col md:flex-row justify-between min-w-full">
                             <h3 className='font-semibold'>Renting Brooklyn LLC (Individual Real Estate Brokerage) - New York, NY</h3>
                             <h3 className='font-semibold'>2017 - 2020</h3>
                         </div>
-                        <div className="flex justify-between">
+                        <div className="flex flex-col md:flex-row justify-between">
                             <h4 className='italic'>Real Estate Broker</h4>
                             <h4 className='italic'>12/17 - 03/20</h4>
                         </div>
@@ -52,7 +52,7 @@ function Resume({}: Props) {
                         </ul>
                     </div>
                     <div className='py-4' id='office_manager'>
-                        <div className="flex justify-between min-w-full">
+                        <div className="flex flex-col md:flex-row justify-between min-w-full">
                             <h3 className='font-semibold'>Subway Realty Group (Real Estate Firm) - New York, NY</h3>
                             <h3 className='font-semibold'>2013 - 2019</h3>
                         </div>
@@ -69,11 +69,11 @@ function Resume({}: Props) {
                         </ul>
                     </div>
                     <div id='marketing_sales'>
-                        <div className="flex justify-between min-w-full">
+                        <div className="flex flex-col md:flex-row justify-between min-w-full">
                             <h3 className='font-semibold'>Eventurous Inc. (Event Planning & Venue Management Firm) - Cincinnati, OH</h3>
                             <h3 className='font-semibold'>2009 - 2013</h3>
                         </div>
-                        <div className="flex justify-between">
+                        <div className="flex flex-col md:flex-row justify-between">
                             <h4 className='italic'>Marketing & Sales Executive - Pinecroft at Crosley Estate (Event Venue)</h4>
                             <h4 className='italic'>04/12 - 03/13</h4>
                         </div>
@@ -82,7 +82,7 @@ function Resume({}: Props) {
                             <li className='list-disc'>Guaranteed over $2,000,000 in gross revenue for managing partner Funky&#39;s Catering within 1 year</li>
                             <li className='list-disc'>Developed property website, using Wordpress, as primary source for information regarding rental of estate</li>
                         </ul>
-                        <div className="flex justify-between">
+                        <div className="flex flex-col md:flex-row justify-between">
                             <h4 className='italic'>Marketing & Business Development Strategist</h4>
                             <h4 className='italic'>2009 - 2012</h4>
                         </div>
@@ -93,23 +93,23 @@ function Resume({}: Props) {
                     </div>
                     <div className='pt-4' id='cert_edu'>
                         <h2 className='font-semibold text-lg'>Higher Education | Certifications</h2>
-                        <div className='flex justify-between'>
+                        <div className='flex flex-col md:flex-row justify-between'>
                             <h4 className='font-medium'>HarvardX - CS50 - Introduction to Computer Science</h4>
                             <h4 className='font-medium'>March 2021</h4>
                         </div>
-                        <div className='flex justify-between'>
+                        <div className='flex flex-col md:flex-row justify-between'>
                             <h4 className='font-medium'>CodeCademy Pro - Web Development Career Path </h4>
                             <h4 className='font-medium'>May 2020</h4>
                         </div>
-                        <div className='flex justify-between'>
+                        <div className='flex flex-col md:flex-row justify-between'>
                             <h4 className='font-medium'>Ohio State University - Max M. Fisher College of Business </h4>
                             <h4 className='font-medium'>2009</h4>
                         </div>
-                        <div className='flex justify-between -mt-1'>
+                        <div className='flex flex-col md:flex-row justify-between -mt-1'>
                             <p className='text-sm'>B.S. Business Administration | Marketing</p>
                             <p className='text-sm'>Cum Laude</p>
                         </div>
-                        <div className='flex justify-between'>
+                        <div className='flex flex-col md:flex-row justify-between'>
                             <p className='font-medium'>New York State Licensed Real Estate Broker</p>
                             <p className='font-medium'>Since 2017</p>
                         </div>
@@ -123,11 +123,11 @@ function Resume({}: Props) {
                         </div>
                         <div id='body_experience'>
                             <h2 className='font-semibold text-lg'>Experience</h2>
-                            <div className="flex justify-between min-w-full">
+                            <div className="flex flex-col md:flex-row justify-between min-w-full">
                                 <h3 className='font-semibold'>The Glimpse Group (Immersive Technologies) - New York, NY </h3>
                                 <h3 className='font-semibold'>2022 - 2023</h3>
                             </div>
-                            <div className="flex justify-between">
+                            <div className="flex flex-col md:flex-row justify-between">
                                 <h4 className='italic'>Full-Stack Web Developer</h4>
                                 <h4 className='italic'>06/22 - 10/23</h4>
                             </div>

@@ -47,8 +47,8 @@ function Dev({}: Props) {
   
   return (
     
-      <div className='scroll-pt-2 mx-3 gap-y-3 slider-container' id='development'>
-        <h1 className='text-2xl text-gold uppercase'>Development Projects</h1>
+      <div className='scroll-pt-2 mx-3 gap-y-3 slider-container px-3' id='development'>
+        <h1 className='text-2xl text-gold uppercase -ml-3'>Development Projects</h1>
         <Slider {...settings}>
           <div>
             <h3>1</h3>
