@@ -12,7 +12,7 @@ type Props = {}
 
 function Foot({}: Props) {
   return (
-    <Footer container className='bg-white dark:bg-gray-800'>
+    <Footer container className='bg-transparent rounded-none shadow-none'>
       <div className="w-full text-center">
         <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
         

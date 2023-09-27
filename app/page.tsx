@@ -19,14 +19,20 @@ const customTheme: CustomFlowbiteTheme = {
 
 export default function Home() {
   return (
-    <Flowbite>
-      <Header />
-      <About />
-      <Dev />
-      <Resume />
-      <Contact />
-      <DarkModeButton />
-      <Foot />
-    </Flowbite>
+    <div className="relative flex w-full overflow-hidden position-right">
+      
+      <div className="z-10 w-full">
+        <Flowbite>
+          <Header />
+          <About />
+          <Dev />
+          <Resume />
+          <Contact />
+          <DarkModeButton />
+          <Foot />
+        </Flowbite>
+      </div>
+      
+    </div>
   )
 }

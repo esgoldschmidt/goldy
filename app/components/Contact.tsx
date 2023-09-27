@@ -1,9 +1,11 @@
 'use client'
 import React, { useEffect, useState } from "react";
+import Loader from "./Loader";
 
 export default function Contact(){
   const [mounted, setMounted] = useState(false)
   const [canSubmit, setCanSubmit] = useState(false)
+  const [isSubmitting, setIsSumbitting] = useState(false)
   const [submitted, setSubmitted] = useState('')
   const [email, setEmail] = useState('')
   const [firstName, setFirstName] = useState('')
@@ -25,6 +27,7 @@ export default function Contact(){
   }, [email, firstName, lastName, org, message])
 
   async function handleSubmit(event: any){
+    setIsSumbitting(true)
     const element = document.getElementById('SubmitForm');
     event.preventDefault();
     const data = {
@@ -53,6 +56,7 @@ export default function Contact(){
     if (!response.ok){
       console.log("Message failed to send")
     }
+    setIsSumbitting(false)
   }
   return (
     <div className="w-full px-4 my-10">
@@ -77,8 +81,8 @@ export default function Contact(){
             </textarea>
           </div>
         </div>
-        <button type="submit" className={`text-center px-4 py-2 w-36 bg-gray-700 dark:bg-gray-200 dark:text-gray-700 text-white rounded ease duration-700 ${canSubmit && "hover:-translate-y-1 hover:bg-gold hover:dark:bg-gold"}`} disabled={!canSubmit}>Send Message</button>
-        <div><p>{submitted}</p></div>
+        <button type="submit" className={`text-center px-4 py-2 w-36 bg-gray-700 dark:bg-gray-200 dark:text-gray-700 text-white rounded ease duration-700 ${canSubmit && "hover:-translate-y-1 hover:bg-gold hover:dark:bg-gold"}`} disabled={!canSubmit}>{isSubmitting ? <Loader /> : "Send Message"}</button>
+        <div><p className="m-2 text-sm">{submitted}</p></div>
       </form>
     </div>
   )

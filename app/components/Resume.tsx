@@ -29,14 +29,14 @@ function Resume({}: Props) {
   return (
     <div className='min-h-48 scroll-pt-2 p-4 w-full relative' id="resume">
         <h1 className='text-2xl text-gold uppercase'>Résumé</h1>
-        <Accordion collapseAll className='flex flex-col-reverse p-4 my-4'>
+        <Accordion collapseAll className='flex flex-col-reverse p-4 my-4 bg-white dark:bg-gray-800'>
             <Accordion.Panel className='ease duration-700 flex flex-col'>
             
                 <Accordion.Title className="w-full">
                     
                 </Accordion.Title>
-                <Accordion.Content className='bg-transparent px-0'>
-                <div className="mb-2 text-gray-700 dark:text-white bg-transparent" id='more_exp'>
+                <Accordion.Content className=' px-0'>
+                <div className="mb-2 text-gray-700 dark:text-white" id='more_exp'>
                     <div id='broker'>
                         <div className="flex justify-between min-w-full">
                             <h3 className='font-semibold'>Renting Brooklyn LLC (Individual Real Estate Brokerage) - New York, NY</h3>
