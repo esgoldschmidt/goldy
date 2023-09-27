@@ -4,7 +4,7 @@ type Props = {}
 
 function About({}: Props) {
   return (
-    <div className='p-3'>
+    <div className='p-3 w-full gap-3 flex flex-col md:w-3/4' id='about'>
         <h1 className='uppercase text-gold text-2xl'>About Eric</h1>
         <h2 className='text-cyan-600 dark:text-green-200'>My Curious Pursuit | A Journey in Tech</h2>
         <p >Hi. I&#39;m Eric. I design and develop web experiences that aim to simplify lives. 
@@ -22,7 +22,7 @@ function About({}: Props) {
             including Amplify, CloudFront, Lambda, Route53, S3, Simple Email Service and 
             EventBridge. All projects are version controlled using Git and housed on GitHub.
         </p>
-        <p>Let&#39;s connect, I&#39;d love to get started on our next big project</p>
+        <p>Let&#39;s connect, I&#39;d love to get started on our next project.</p>
     </div>
     
   )

@@ -12,26 +12,26 @@ type Props = {}
 
 function Foot({}: Props) {
   return (
-    <Footer container className='bg-transparent rounded-none shadow-none'>
+    <Footer container className='bg-transparent dark:bg-transparent rounded-none shadow-none'>
       <div className="w-full text-center">
         <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
         
-          <h1 className={`${roboto.className} text-gold text-4xl`}>
+          <a className={`${roboto.className} text-gold text-4xl`} href="#">
             Goldy
-          </h1>
+          </a>
         
            
           <Footer.LinkGroup className='flex gap-3 justify-center'>
-            <Footer.Link href="#about" className='text-gold link_no_under'>
+            <Footer.Link href="#about" className='text-gold link_no_under ease duration-700 hover:-translate-y-1'>
               About
             </Footer.Link>
-            <Footer.Link href="#development" className='text-gold'>
+            <Footer.Link href="#development" className='text-gold ease duration-700 hover:-translate-y-1'>
               Development
             </Footer.Link>
-            <Footer.Link href="#resume" className='text-gold'>
+            <Footer.Link href="#resume" className='text-gold ease duration-700 hover:-translate-y-1'>
               Résumé
             </Footer.Link>
-            <Footer.Link href="#contact" className='text-gold'>
+            <Footer.Link href="#contact" className='text-gold ease duration-700 hover:-translate-y-1'>
               Contact
             </Footer.Link>
           </Footer.LinkGroup>
@@ -41,7 +41,7 @@ function Foot({}: Props) {
           by="E. Goldschmidt"
           href="#"
           year={2023}
-          className='text-gray-700 dark:text-white'
+          className='text-gold'
         />
       </div>
     </Footer>
