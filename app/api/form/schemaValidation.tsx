@@ -10,7 +10,7 @@ type ContactUsSchema = Yup.Schema<{
     message: string;
   }>;
 
-export const contactUsValidationSchema = Yup.object().shape({
+const contactUsValidationSchema = Yup.object().shape({
   email: Yup.string()
     .email("Invalid Email")
     .max(75, 'Email Too Long')

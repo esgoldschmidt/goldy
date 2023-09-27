@@ -17,10 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" style={{scrollBehavior:'smooth'}}  id='main'>
-      <body className={`{montserrat.className} bg-white text-gray-700 dark:bg-gray-800 dark:text-white`}>
-        <Providers>
-          {children}
-        </Providers> 
+      <body className={`{montserrat.className} bg-white text-gray-700 dark:bg-gray-800 dark:text-white flex justify-center `}>
+        <div className='max-w-7xl'>
+          <Providers>
+            {children}
+          </Providers>
+        </div>
       </body>
     </html>
   )
