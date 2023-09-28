@@ -63,7 +63,7 @@ function Dev({}: Props) {
       <div className='scroll-pt-2 mx-3 gap-y-3 slider-container px-3' id='development'>
         <h1 className='text-2xl text-gold uppercase -ml-3'>Development Projects</h1>
         <Slider {...settings}>
-        <div onClick={() => props.setOpenGliimpse('default')} className="cursor-pointer">
+        <div onClick={() => props.setOpenGlimpse('default')} className="cursor-pointer">
             <Image
               src='/resources/cardGlimpse.png'
               width={240}
@@ -96,7 +96,7 @@ function Dev({}: Props) {
               src='/resources/cardSubway.png'
               width={240}
               height={312}
-              alt="Eventurous Card"
+              alt="Subway Card"
               className="p-3"
             />
           </div>
@@ -105,7 +105,7 @@ function Dev({}: Props) {
               src='/resources/cardRosie.png'
               width={240}
               height={312}
-              alt="Eventurous Card"
+              alt="Rosie Card"
               className="p-3"
             />
           </div>
@@ -114,27 +114,150 @@ function Dev({}: Props) {
               src='/resources/cardRB.png'
               width={240}
               height={312}
-              alt="Eventurous Card"
+              alt="Renting Brooklyn Card"
               className="p-3"
             />
           </div>
         </Slider>
         
-      <Modal show={props.openEventurous === 'default'} onClose={() => props.setOpenEventurous(undefined)} className="h-screen relative">
+      <Modal 
+        show={props.openEventurous === 'default'} 
+        onClose={() => props.setOpenEventurous(undefined)} 
+        size="5xl" 
+        position="top-center"
+        className="bg-transparent"
+        >
       
-        <Modal.Body className="absolute h-[calc(100vh-2rem)] w-full overflow-scroll">
-          <Image
-              src='/resources/cardRB.png'
-              fill={true}
-              alt="Eventurous Card"
-              className="p-3 object-contain h-96"
-            />
-            <Button color="gray" onClick={() => props.setOpenEventurous(undefined)} className="absolute top-0 right-0 rounded-full ">
-              X
-            </Button>
+        <Modal.Body>
+          <div className="overflow-y-scroll min-h-screen ">
+            <div className="w-full relative">
+              <img
+                  src='/resources/moreEventurous.png'
+                  alt="Eventurous Card"
+                  className="p-3 object-cover object-top w-full"
+                />
+                <Button color="gray" onClick={() => props.setOpenEventurous(undefined)} className="fixed top-1 right-8 rounded-full ">
+                  X
+                </Button>
+                        </div>
+            </div>
+        </Modal.Body> 
+      </Modal>
+      
+      <Modal 
+        show={props.openSubway === 'default'} 
+        onClose={() => props.setOpenSubway(undefined)} 
+        size="5xl" 
+        position="top-center"
+        className="bg-transparent"
+        >
+      
+        <Modal.Body>
+          <div className="overflow-y-scroll min-h-screen ">
+            <div className="w-full relative">
+              <img
+                  src='/resources/moreSubway.png'
+                  alt="Subway Card"
+                  className="p-3 object-cover object-top w-full"
+                />
+                <Button color="gray" onClick={() => props.setOpenSubway(undefined)} className="fixed top-1 right-8 rounded-full ">
+                  X
+                </Button>
+                        </div>
+            </div>
         </Modal.Body>
-        
-        
+      </Modal>
+      <Modal 
+        show={props.openGlimpse === 'default'} 
+        onClose={() => props.setOpenGlimpse(undefined)} 
+        size="5xl" 
+        position="top-center"
+        className="bg-transparent"
+        >
+      
+        <Modal.Body>
+          <div className="overflow-y-scroll min-h-screen ">
+            <div className="w-full relative">
+              <img
+                  src='/resources/moreGlimpse.png'
+                  alt="Glimpse Card"
+                  className="p-3 object-cover object-top w-full"
+                />
+                <Button color="gray" onClick={() => props.setOpenGlimpse(undefined)} className="fixed top-1 right-8 rounded-full ">
+                  X
+                </Button>
+                        </div>
+            </div>
+        </Modal.Body>
+      </Modal>
+      <Modal 
+        show={props.openRosie === 'default'} 
+        onClose={() => props.setOpenRosie(undefined)} 
+        size="5xl" 
+        position="top-center"
+        className="bg-transparent"
+        >
+      
+        <Modal.Body>
+          <div className="overflow-y-scroll min-h-screen ">
+            <div className="w-full relative">
+              <img
+                  src='/resources/moreRosie.png'
+                  alt="Rosie Card"
+                  className="p-3 object-cover object-top w-full"
+                />
+                <Button color="gray" onClick={() => props.setOpenRosie(undefined)} className="fixed top-1 right-8 rounded-full ">
+                  X
+                </Button>
+                        </div>
+            </div>
+        </Modal.Body>
+      </Modal>
+      <Modal 
+        show={props.openLettr === 'default'} 
+        onClose={() => props.setOpenLettr(undefined)} 
+        size="5xl" 
+        position="top-center"
+        className="bg-transparent"
+        >
+      
+        <Modal.Body>
+          <div className="overflow-y-scroll min-h-screen ">
+            <div className="w-full relative">
+              <img
+                  src='/resources/moreLettr.png'
+                  alt="Lettr Card"
+                  className="p-3 object-cover object-top w-full"
+                />
+                <Button color="gray" onClick={() => props.setOpenLettr(undefined)} className="fixed top-1 right-8 rounded-full ">
+                  X
+                </Button>
+                        </div>
+            </div>
+        </Modal.Body>
+      </Modal>
+      <Modal 
+        show={props.openRB === 'default'} 
+        onClose={() => props.setOpenRB(undefined)} 
+        size="5xl" 
+        position="top-center"
+        className="bg-transparent"
+        >
+      
+        <Modal.Body>
+          <div className="overflow-y-scroll min-h-screen ">
+            <div className="w-full relative">
+              <img
+                  src='/resources/moreRB.png'
+                  alt="RB Card"
+                  className="p-3 object-cover object-top w-full"
+                />
+                <Button color="gray" onClick={() => props.setOpenRB(undefined)} className="fixed top-1 right-8 rounded-full ">
+                  X
+                </Button>
+                        </div>
+            </div>
+        </Modal.Body>
       </Modal>
       </div>
   
