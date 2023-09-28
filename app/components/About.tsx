@@ -13,7 +13,7 @@ function About({}: Props) {
         </p>
         <p>I thrive on interfacing with external applications via APIs, including platforms like Insightly, Emailjs, Socrata, and Google. My projects are hosted and launched through Amazon Web Services (AWS), where I harness the power of tools like Amplify, CloudFront, Lambda, Route53, S3, Simple Email Service, and EventBridge.</p>
         <p>Each of my projects is meticulously version controlled using Git and securely stored on GitHub.</p>
-        <p>Let's connect — I'm excited to embark on our next project together.</p>
+        <p>Let&#39;s connect — I&#39;m excited to embark on our next project together.</p>
     </div>
     
   )
