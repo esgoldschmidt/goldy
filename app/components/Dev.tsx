@@ -63,59 +63,59 @@ function Dev({}: Props) {
       <div className='scroll-pt-2 mx-3 gap-y-3 slider-container px-3' id='development'>
         <h1 className='text-2xl text-gold uppercase -ml-3'>Development Projects</h1>
         <Slider {...settings}>
-        <div onClick={() => props.setOpenGlimpse('default')} className="cursor-pointer">
+        <div onClick={() => props.setOpenGlimpse('default')} className="cursor-pointer outline-none">
             <Image
               src='/resources/cardGlimpse.png'
               width={240}
               height={312}
               alt="Glimpse Card"
-              className="p-3"
+              className="p-3 outline-none"
             />
           </div>
-          <div onClick={() => props.setOpenEventurous('default')} className="cursor-pointer">
+          <div onClick={() => props.setOpenEventurous('default')} className="cursor-pointer outline-none">
             <Image
               src='/resources/cardEventurous.png'
               width={240}
               height={312}
               alt="Eventurous Card"
-              className="p-3"
+              className="p-3 outline-none"
             />
           
           </div>
-          <div onClick={() => props.setOpenLettr('default')} className="cursor-pointer">
+          <div onClick={() => props.setOpenLettr('default')} className="cursor-pointer outline-none">
           <Image
               src='/resources/cardLettr.png'
               width={240}
               height={312}
               alt="Lettr Card"
-              className="p-3"
+              className="p-3 outline-none"
             />
           </div>
-          <div onClick={() => props.setOpenSubway('default')} className="cursor-pointer">
+          <div onClick={() => props.setOpenSubway('default')} className="cursor-pointer outline-none">
           <Image
               src='/resources/cardSubway.png'
               width={240}
               height={312}
               alt="Subway Card"
-              className="p-3"
+              className="p-3 outline-none"
             />
           </div>
-          <div onClick={() => props.setOpenRosie('default')} className="cursor-pointer">
+          <div onClick={() => props.setOpenRosie('default')} className="cursor-pointer outline-none">
           <Image
               src='/resources/cardRosie.png'
               width={240}
               height={312}
               alt="Rosie Card"
-              className="p-3"
+              className="p-3 outline-none"
             />
           </div>
-          <div onClick={() => props.setOpenRB('default')} className="cursor-pointer">
+          <div onClick={() => props.setOpenRB('default')} className="cursor-pointer outline-none">
           <Image
               src='/resources/cardRB.png'
               width={240}
               height={312}
               alt="Renting Brooklyn Card"
-              className="p-3"
+              className="p-3 outline-none"
             />
           </div>
         </Slider>
