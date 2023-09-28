@@ -15,10 +15,10 @@ const Header = () => {
           Goldy
         </h1>
         <div className='flex justify-center gap-4 md:gap-12 w-full p-3 uppercase'>
-          <Link href="#about" className='ease duration-700 text-gold hover:-translate-y-1'>About</Link>
-          <Link href="#development" className='ease duration-700 text-gold hover:-translate-y-1'>Development</Link>
-          <Link href="#resume" className='ease duration-700 text-gold hover:-translate-y-1'>Résumé</Link>
-          <Link href="#contact" className='ease duration-700 text-gold hover:-translate-y-1'>Contact</Link>
+          <Link href="#about" className='ease text-sm md:text-base duration-700 text-gold hover:-translate-y-1'>About</Link>
+          <Link href="#development" className='ease text-sm md:text-base duration-700 text-gold hover:-translate-y-1'>Development</Link>
+          <Link href="#resume" className='ease text-sm md:text-base duration-700 text-gold hover:-translate-y-1'>Resume</Link>
+          <Link href="#contact" className='ease text-sm md:text-base duration-700 text-gold hover:-translate-y-1'>Contact</Link>
         </div>
         
         

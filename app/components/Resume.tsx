@@ -27,8 +27,8 @@ function Resume({}: Props) {
       }, []);
 
   return (
-    <div className='min-h-48 scroll-pt-2 p-4 w-full relative' id="resume">
-        <h1 className='text-2xl text-gold uppercase'>Résumé</h1>
+    <div className='min-h-48 scroll-pt-2 p-4 w-full relative pt-8' id="resume">
+        <h1 className='text-2xl text-gold uppercase'>Resume</h1>
         <Accordion collapseAll className='flex flex-col-reverse p-4 my-4 bg-white/80 dark:bg-gray-800/80'>
             <Accordion.Panel className='ease duration-700 flex flex-col'>
             

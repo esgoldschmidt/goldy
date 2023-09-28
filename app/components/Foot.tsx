@@ -29,7 +29,7 @@ function Foot({}: Props) {
               Development
             </Footer.Link>
             <Footer.Link href="#resume" className='text-gold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] ease duration-700 hover:-translate-y-1'>
-              Résumé
+              Resume
             </Footer.Link>
             <Footer.Link href="#contact" className='text-gold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] ease duration-700 hover:-translate-y-1'>
               Contact
