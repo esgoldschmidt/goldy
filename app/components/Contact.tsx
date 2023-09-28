@@ -59,8 +59,8 @@ export default function Contact(){
     setIsSumbitting(false)
   }
   return (
-    <div className="w-full px-4 my-10" id="contact">
-      <h1 className="text-2xl text-gold uppercase pb-4">Contact</h1>
+    <div className="w-full px-4 my-10" >
+      <h1 className="text-2xl text-gold uppercase pb-4" id="contact">Contact</h1>
       <form className="rounded-lg flex flex-col items-center w-full" onSubmit={handleSubmit} id='SubmitForm'>
         <div className="w-full flex flex-col md:flex-row rounded-lg gap-2 justify-between">
           <div className="flex flex-col gap-2 w-full md:w-1/3">
