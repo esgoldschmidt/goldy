@@ -35,6 +35,11 @@ button.slick-arrow.slick-prev::before {
   z-index: 45;
 }
 
+:focus-visible {
+  outline: none;
+  
+}
+
 #modal-overlay{
   align-items: start !important;
 }
