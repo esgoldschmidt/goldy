@@ -25,7 +25,7 @@ export default function RootLayout({
             {children}
           </Providers>
         </div>
-        <img src='https://media.graphassets.com/IeQ1AMWmQqGg4LTJNsQv' className="z-0 opacity-50 lg:opacity-100 fixed right-0 bottom-0 max-h-full object-contain max-w-full" ></img>
+        <img src='https://media.graphassets.com/Y7Exh6dCQKId6Ju5p6hT' className="z-0 opacity-50 lg:opacity-100 fixed right-0 bottom-0 max-h-full object-contain max-w-full" ></img>
       </body>
     </html>
   )

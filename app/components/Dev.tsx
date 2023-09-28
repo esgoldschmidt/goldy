@@ -69,7 +69,7 @@ function Dev({}: Props) {
               width={240}
               height={312}
               alt="Glimpse Card"
-              className="p-3 outline-none"
+              className="m-3 outline-none shadow"
             />
           </div>
           <div onClick={() => props.setOpenEventurous('default')} className="cursor-pointer outline-none">
@@ -78,7 +78,7 @@ function Dev({}: Props) {
               width={240}
               height={312}
               alt="Eventurous Card"
-              className="p-3 outline-none"
+              className="m-3 outline-none shadow"
             />
           
           </div>
@@ -88,7 +88,7 @@ function Dev({}: Props) {
               width={240}
               height={312}
               alt="Lettr Card"
-              className="p-3 outline-none"
+              className="m-3 outline-none shadow"
             />
           </div>
           <div onClick={() => props.setOpenSubway('default')} className="cursor-pointer outline-none">
@@ -97,7 +97,7 @@ function Dev({}: Props) {
               width={240}
               height={312}
               alt="Subway Card"
-              className="p-3 outline-none"
+              className="m-3 outline-none shadow"
             />
           </div>
           <div onClick={() => props.setOpenRosie('default')} className="cursor-pointer outline-none">
@@ -106,7 +106,7 @@ function Dev({}: Props) {
               width={240}
               height={312}
               alt="Rosie Card"
-              className="p-3 outline-none"
+              className="m-3 outline-none shadow"
             />
           </div>
           <div onClick={() => props.setOpenRB('default')} className="cursor-pointer outline-none">
@@ -115,7 +115,7 @@ function Dev({}: Props) {
               width={240}
               height={312}
               alt="Renting Brooklyn Card"
-              className="p-3 outline-none"
+              className="m-3 outline-none shadow"
             />
           </div>
         </Slider>
