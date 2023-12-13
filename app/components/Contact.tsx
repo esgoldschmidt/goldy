@@ -35,7 +35,7 @@ export default function Contact(){
       firstName: String(event.target.firstName.value),
       lastName: String(event.target.lastName.value),
       org: String(event.target.org.value),
-      message: String(event.target.message.value)
+      message: String(event.target.message.value) 
     }
     const response = await fetch("/api/contact", {
       method: "POST",
