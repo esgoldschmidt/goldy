@@ -16,14 +16,14 @@ import { Button, Modal } from 'flowbite-react';
 type Props = {}
 
 function Dev({}: Props) {
-
+  const [openGoldylocks, setOpenGoldylocks] = useState<string | undefined>();
   const [openEventurous, setOpenEventurous] = useState<string | undefined>();
   const [openSubway, setOpenSubway] = useState<string | undefined>();
   const [openGlimpse, setOpenGlimpse] = useState<string | undefined>();
   const [openLettr, setOpenLettr] = useState<string | undefined>();
   const [openRB, setOpenRB] = useState<string | undefined>();
   const [openRosie, setOpenRosie] = useState<string | undefined>();
-  const props = { openEventurous, setOpenEventurous, openSubway, setOpenSubway, openGlimpse, setOpenGlimpse, openLettr, setOpenLettr, openRB, setOpenRB, openRosie, setOpenRosie };
+  const props = { openEventurous, setOpenEventurous, openSubway, setOpenSubway, openGlimpse, setOpenGlimpse, openLettr, setOpenLettr, openRB, setOpenRB, openRosie, setOpenRosie, openGoldylocks, setOpenGoldylocks };
 
   var settings = {
     dots: true,
@@ -64,7 +64,16 @@ function Dev({}: Props) {
       <div className='scroll-pt-2 mx-3 gap-y-3 slider-container px-3' id='development'>
         <h1 className='text-2xl text-gold uppercase -ml-3'>Development Projects</h1>
         <Slider {...settings}>
-        <div onClick={() => props.setOpenGlimpse('default')} className="cursor-pointer outline-none">
+          <div onClick={() => props.setOpenGoldylocks('default')} className="cursor-pointer outline-none">
+            <Image
+              src='/resources/cardGoldylocks.png'
+              width={240}
+              height={312}
+              alt="Goldylocks Card"
+              className="m-3 outline-none shadow"
+            />
+          </div>
+         <div onClick={() => props.setOpenGlimpse('default')} className="cursor-pointer outline-none">
             <Image
               src='/resources/cardGlimpse.png'
               width={240}
@@ -83,7 +92,7 @@ function Dev({}: Props) {
             />
           
           </div>
-          <div onClick={() => props.setOpenLettr('default')} className="cursor-pointer outline-none">
+          {/* <div onClick={() => props.setOpenLettr('default')} className="cursor-pointer outline-none">
           <Image
               src='/resources/cardLettr.png'
               width={240}
@@ -91,7 +100,7 @@ function Dev({}: Props) {
               alt="Lettr Card"
               className="m-3 outline-none shadow"
             />
-          </div>
+          </div> */}
           <div onClick={() => props.setOpenSubway('default')} className="cursor-pointer outline-none">
           <Image
               src='/resources/cardSubway.png'
@@ -101,7 +110,7 @@ function Dev({}: Props) {
               className="m-3 outline-none shadow"
             />
           </div>
-          <div onClick={() => props.setOpenRosie('default')} className="cursor-pointer outline-none">
+          {/* <div onClick={() => props.setOpenRosie('default')} className="cursor-pointer outline-none">
           <Image
               src='/resources/cardRosie.png'
               width={240}
@@ -109,8 +118,8 @@ function Dev({}: Props) {
               alt="Rosie Card"
               className="m-3 outline-none shadow"
             />
-          </div>
-          <div onClick={() => props.setOpenRB('default')} className="cursor-pointer outline-none">
+          </div> */}
+          {/* <div onClick={() => props.setOpenRB('default')} className="cursor-pointer outline-none">
           <Image
               src='/resources/cardRB.png'
               width={240}
@@ -118,7 +127,7 @@ function Dev({}: Props) {
               alt="Renting Brooklyn Card"
               className="m-3 outline-none shadow"
             />
-          </div>
+          </div> */}
         </Slider>
         
       <Modal 
@@ -189,6 +198,29 @@ function Dev({}: Props) {
                 </Button>
                         </div>
             </div>
+        </Modal.Body>
+      </Modal>
+      <Modal 
+        show={props.openGoldylocks === 'default'} 
+        onClose={() => props.setOpenGoldylocks(undefined)} 
+        size="5xl" 
+        position="top-center"
+        className="bg-transparent"
+        >
+      
+        <Modal.Body>
+          <div className="overflow-y-scroll min-h-screen ">
+            <div className="w-full relative">
+              <img
+                src='/resources/moreGoldylocks.png'
+                alt="Goldylocks More"
+                className="p-3 object-cover object-top w-full"
+              />
+              <Button color="gray" onClick={() => props.setOpenGoldylocks(undefined)} className="fixed top-1 right-8 rounded-full ">
+                X
+              </Button>
+            </div>
+          </div>
         </Modal.Body>
       </Modal>
       <Modal 
