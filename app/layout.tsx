@@ -19,6 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" style={{scrollBehavior:'smooth'}}  id='main'>
+      <head>
+        {/* Link to Google Material Icons */}
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
+      </head>
       <body className={`{montserrat.className} bg-white text-gray-700 dark:bg-gray-800 dark:text-white flex justify-center m-3 relative max-w-screen`}>
         <div className='max-w-7xl'>
           <Providers>

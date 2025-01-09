@@ -11,6 +11,8 @@ import { Button, Modal } from 'flowbite-react';
 <Head>
   <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
 </Head>
 
 type Props = {}
@@ -187,7 +189,8 @@ function Dev({}: Props) {
       
         <Modal.Body>
           <div className="overflow-y-scroll min-h-screen ">
-            <div className="w-full relative">
+            <div className="w-full relative mt-3 flex flex-col items-center">
+              <a href='https://theglimpsegroup.com' target="_blank" className="flex items-center p-3 bg-sky-600 rounded-md text-white"><p>Visit Glimpse Website</p> <span className="material-icons">open_in_new</span></a>
               <img
                   src='/resources/moreGlimpse.png'
                   alt="Glimpse Card"
@@ -210,7 +213,8 @@ function Dev({}: Props) {
       
         <Modal.Body>
           <div className="overflow-y-scroll min-h-screen ">
-            <div className="w-full relative">
+            <div className="w-full relative mt-3 flex flex-col items-center">
+              <a href='https://goldylocks.io' target="_blank" className="flex items-center p-3 bg-gold rounded-md"><p>Visit Goldylocks.io</p> <span className="material-icons">open_in_new</span></a>
               <img
                 src='/resources/moreGoldylocks.png'
                 alt="Goldylocks More"
