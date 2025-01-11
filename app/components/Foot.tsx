@@ -38,9 +38,9 @@ function Foot({}: Props) {
         </div>
         <Footer.Divider className='border-gray-300 dark:border-gray-600' />
         <Footer.Copyright
-          by="E. Goldschmidt"
+          by="Eric Goldschmidt"
           href="#"
-          year={2023}
+          year={2025}
           className='text-gold dark:text-gold uppercase [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]'
         />
       </div>
