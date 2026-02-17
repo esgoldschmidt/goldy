@@ -70,7 +70,7 @@ export default function Contact(){
               <input type="email" name="email" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80 placeholder-gray-500 dark:placeholder-gray-200' autoComplete='off' value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder='*Email' id='email' required minLength={3} maxLength={150} />
               <label className="visuallyHidden" htmlFor="firstName">First Name</label>
               <input type="text" name="firstName" className='dark:bg-gray-800 rounded bg-white/80 dark:bg-gray-800/80 placeholder-gray-500 dark:placeholder-gray-200' autoComplete='off' value={firstName} onChange={(e)=>{setFirstName(e.target.value)}} placeholder='*First Name' id='firstName' required minLength={3} maxLength={50} />
-            </div>
+            </div> 
             <div className="flex flex-col gap-2 w-full md:w-1/3">
               <label className="visuallyHidden" htmlFor="lastName">Last Name</label>
               <input type="text" name="lastName" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80 placeholder-gray-500 dark:placeholder-gray-200' autoComplete='off' value={lastName} onChange={(e)=>{setLastName(e.target.value)}} placeholder="*Last Name" id='lastName' required minLength={3} maxLength={50} />
