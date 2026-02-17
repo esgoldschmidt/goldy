@@ -16,6 +16,11 @@ export async function POST(request: Request) {
         hasSecret: !!process.env.AMAZON_SECRET_KEY,
     });
 
+    console.log("ENV KEYS sample", Object.keys(process.env).filter(k =>
+    k.includes("AMAZON") || k.includes("NEXT_PUBLIC") || k.includes("AWS")
+    ))
+
+
     AWS.config.update({
         accessKeyId: accessKey,
         secretAccessKey: secretKey,
