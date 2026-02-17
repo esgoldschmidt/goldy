@@ -1,19 +1,24 @@
-// aws-ses.ts
+// services/aws-ses.ts
 import AWS from "aws-sdk"
 import nodemailer from "nodemailer"
-
-/**
- * NOTE:
- * Do NOT set accessKeyId/secretAccessKey here.
- * In Amplify/SSR, the Lambda runtime provides credentials automatically via IAM role.
- */
 
 const REGION = process.env.AWS_REGION ?? "us-east-1"
 const FROM_EMAIL = "hello@ericgoldschmidt.com"
 
-function getTransporter() {
-  const ses = new AWS.SES({ apiVersion: "2010-12-01", region: REGION })
-  return nodemailer.createTransport({ SES: ses })
+function getSes() {
+  const accessKeyId = process.env.AMAZON_ACCESS_KEY
+  const secretAccessKey = process.env.AMAZON_SECRET_KEY
+
+  if (accessKeyId && secretAccessKey) {
+    return new AWS.SES({
+      apiVersion: "2010-12-01",
+      region: REGION,
+      credentials: { accessKeyId, secretAccessKey },
+    })
+  }
+
+  // Amplify runtime role credentials
+  return new AWS.SES({ apiVersion: "2010-12-01", region: REGION })
 }
 
 export async function sendMail(opts: {
@@ -21,9 +26,9 @@ export async function sendMail(opts: {
   subject: string
   html: string
   replyTo?: string
-}): Promise<{ ok: boolean; msg?: string; code?: string }> {
+}): Promise<{ ok: boolean; msg?: string; code?: string; messageId?: string }> {
   try {
-    const transporter = getTransporter()
+    const transporter = nodemailer.createTransport({ SES: getSes() })
 
     const info = await transporter.sendMail({
       from: FROM_EMAIL,
@@ -33,7 +38,7 @@ export async function sendMail(opts: {
       replyTo: opts.replyTo,
     })
 
-    return info?.messageId ? { ok: true } : { ok: false, msg: "No messageId returned" }
+    return { ok: true, messageId: info?.messageId }
   } catch (error: any) {
     console.error("sendMail SES error:", error)
     return { ok: false, msg: error?.message ?? "Failed to send email", code: error?.code }
