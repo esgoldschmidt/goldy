@@ -80,7 +80,7 @@ export default function Contact(){
             <div className="flex flex-col gap-2 w-full md:w-1/3">
               <label className="visuallyHidden" htmlFor="message">Message</label>
               <textarea autoComplete='off' name="message" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80 placeholder-gray-500 dark:placeholder-gray-200' rows={ 4 } value={message} onChange={(e)=>{setMessage(e.target.value)}} placeholder="*Message" id='message' required minLength={3} maxLength={600}>
-              </textarea>
+              </textarea> 
             </div>
           </div>
           <button type="submit" className={`text-center px-4 py-2 w-36 bg-gray-700 dark:bg-gray-200 dark:text-gray-700 text-white rounded ease duration-700 ${canSubmit && "hover:-translate-y-1 hover:bg-gold hover:dark:bg-gold"}`} disabled={!canSubmit}>{isSubmitting ? <Loader /> : "Send Message"}</button>
