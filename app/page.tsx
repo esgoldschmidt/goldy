@@ -4,7 +4,6 @@ import Header from './components/Header'
 import About from './components/About'
 import Dev from "./components/Dev";
 import Contact from "./components/Contact";
-import Resume from "./components/Resume";
 import Resume2 from "./components/Resume2";
 import Foot from './components/Foot'
 import { Flowbite } from 'flowbite-react';
