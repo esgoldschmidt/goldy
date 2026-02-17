@@ -76,7 +76,7 @@ export default function Contact(){
               <input type="text" name="lastName" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80 placeholder-gray-500 dark:placeholder-gray-200' autoComplete='off' value={lastName} onChange={(e)=>{setLastName(e.target.value)}} placeholder="*Last Name" id='lastName' required minLength={3} maxLength={50} />
               <label className="visuallyHidden" htmlFor="org">Organization</label>
               <input type="text" name="org" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80 placeholder-gray-500 dark:placeholder-gray-200' autoComplete='off' value={org} onChange={(e)=>{setOrg(e.target.value)}} placeholder='*Organization' id='org' required minLength={3} maxLength={50} />
-            </div> 
+            </div>  
             <div className="flex flex-col gap-2 w-full md:w-1/3">
               <label className="visuallyHidden" htmlFor="message">Message</label>
               <textarea autoComplete='off' name="message" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80 placeholder-gray-500 dark:placeholder-gray-200' rows={ 4 } value={message} onChange={(e)=>{setMessage(e.target.value)}} placeholder="*Message" id='message' required minLength={3} maxLength={600}>
