@@ -8,9 +8,17 @@ export async function POST(request: Request) {
     
     const data = await request.json();
 
+    const accessKey = process.env.AMAZON_ACCESS_KEY
+    const secretKey = process.env.AMAZON_SECRET_KEY
+
+    console.log("ENV CHECK", {
+        hasAccessKey: !!process.env.AMAZON_ACCESS_KEY,
+        hasSecret: !!process.env.AMAZON_SECRET_KEY,
+    });
+
     AWS.config.update({
-        accessKeyId: process.env.AMAZON_ACCESS_KEY,
-        secretAccessKey: process.env.AMAZON_SECRET_KEY,
+        accessKeyId: accessKey,
+        secretAccessKey: secretKey,
         region: "us-east-1",
     });
     AWS.config.getCredentials(function (error) {
