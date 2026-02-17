@@ -10,7 +10,7 @@ function Resume2({}: Props) {
       <div className="flex justify-center items-center p-4 my-4 bg-white/80 dark:bg-gray-800/80">
         {/* Embed the PDF directly */}
         <embed
-          src="/resources/resumeDev.pdf"
+          src="/resources/2026_ESG_Resume_ PDF.pdf"
           type="application/pdf"
           className="w-full h-screen"
         />
