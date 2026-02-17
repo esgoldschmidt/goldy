@@ -1,38 +1,41 @@
-// aws-ses.js
-import * as AWS from "aws-sdk";
-import * as nodemailer from "nodemailer";
+// aws-ses.ts
+import AWS from "aws-sdk"
+import nodemailer from "nodemailer"
 
-AWS.config.update({
-    accessKeyId: process.env.AMAZON_ACCESS_KEY,
-    secretAccessKey: process.env.AMAZON_SECRET_KEY,
-    region: "us-east-1",
-});
-AWS.config.getCredentials(function (error) {
-    if (error) {
-        console.log(error.stack);
-    }
-});
-const ses = new AWS.SES({ apiVersion: "2010-12-01" });
+/**
+ * NOTE:
+ * Do NOT set accessKeyId/secretAccessKey here.
+ * In Amplify/SSR, the Lambda runtime provides credentials automatically via IAM role.
+ */
 
-// change this to the "to" email that you want
-const adminMail = "hello@ericgoldschmidt.com";
-// Create a transporter of nodemailer
-const transporter = nodemailer.createTransport({
-    SES: ses, 
-});
+const REGION = process.env.AWS_REGION ?? "us-east-1"
+const FROM_EMAIL = "hello@ericgoldschmidt.com"
 
-export const sendMail = async (userEmail: string, subject: string, body: string): Promise<{ ok: boolean; msg?: string }> => {
-    try {
-        const response = await transporter.sendMail({
-            from: adminMail,
-            to: userEmail,
-            subject: subject,
-            html: body,
-        });
-        return response?.messageId
-        ? { ok: true }
-        : { ok: false, msg: "Failed to send email" };
-    } catch (error) {
-        return { ok: false, msg: "Failed to send email" };
-    }
-};
+function getTransporter() {
+  const ses = new AWS.SES({ apiVersion: "2010-12-01", region: REGION })
+  return nodemailer.createTransport({ SES: ses })
+}
+
+export async function sendMail(opts: {
+  to: string
+  subject: string
+  html: string
+  replyTo?: string
+}): Promise<{ ok: boolean; msg?: string; code?: string }> {
+  try {
+    const transporter = getTransporter()
+
+    const info = await transporter.sendMail({
+      from: FROM_EMAIL,
+      to: opts.to,
+      subject: opts.subject,
+      html: opts.html,
+      replyTo: opts.replyTo,
+    })
+
+    return info?.messageId ? { ok: true } : { ok: false, msg: "No messageId returned" }
+  } catch (error: any) {
+    console.error("sendMail SES error:", error)
+    return { ok: false, msg: error?.message ?? "Failed to send email", code: error?.code }
+  }
+}
