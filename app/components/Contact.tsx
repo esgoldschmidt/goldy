@@ -5,7 +5,7 @@ import Loader from "./Loader";
 export default function Contact(){
   const [mounted, setMounted] = useState(false)
   const [canSubmit, setCanSubmit] = useState(false)
-  const [isSubmitting, setIsSumbitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState('')
   const [email, setEmail] = useState('')
   const [firstName, setFirstName] = useState('')
@@ -27,7 +27,7 @@ export default function Contact(){
   }, [email, firstName, lastName, org, message])
 
   async function handleSubmit(event: any){
-    setIsSumbitting(true)
+    setIsSubmitting(true)
     const element = document.getElementById('SubmitForm');
     event.preventDefault();
     const data = {
@@ -56,7 +56,7 @@ export default function Contact(){
     if (!response.ok){
       console.log("Message failed to send")
     }
-    setIsSumbitting(false)
+    setIsSubmitting(false)
   }
   return (
     <React.Fragment>
@@ -67,19 +67,19 @@ export default function Contact(){
           <div className="w-full flex flex-col md:flex-row rounded-lg gap-2 justify-between">
             <div className="flex flex-col gap-2 w-full md:w-1/3">
               <label className="visuallyHidden" htmlFor="email">Email</label>
-              <input type="email" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80' autoComplete='off' value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder='*Email' id='email' required minLength={3} maxLength={150} />
+              <input type="email" name="email" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80 placeholder-gray-500 dark:placeholder-gray-200' autoComplete='off' value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder='*Email' id='email' required minLength={3} maxLength={150} />
               <label className="visuallyHidden" htmlFor="firstName">First Name</label>
-              <input type="text" className='dark:bg-gray-800 rounded bg-white/80 dark:bg-gray-800/80' autoComplete='off' value={firstName} onChange={(e)=>{setFirstName(e.target.value)}} placeholder='*First Name' id='firstName' required minLength={3} maxLength={50} />
+              <input type="text" name="firstName" className='dark:bg-gray-800 rounded bg-white/80 dark:bg-gray-800/80 placeholder-gray-500 dark:placeholder-gray-200' autoComplete='off' value={firstName} onChange={(e)=>{setFirstName(e.target.value)}} placeholder='*First Name' id='firstName' required minLength={3} maxLength={50} />
             </div>
             <div className="flex flex-col gap-2 w-full md:w-1/3">
               <label className="visuallyHidden" htmlFor="lastName">Last Name</label>
-              <input type="text" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80' autoComplete='off' value={lastName} onChange={(e)=>{setLastName(e.target.value)}} placeholder="*Last Name" id='lastName' required minLength={3} maxLength={50} />
+              <input type="text" name="lastName" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80 placeholder-gray-500 dark:placeholder-gray-200' autoComplete='off' value={lastName} onChange={(e)=>{setLastName(e.target.value)}} placeholder="*Last Name" id='lastName' required minLength={3} maxLength={50} />
               <label className="visuallyHidden" htmlFor="org">Organization</label>
-              <input type="text" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80' autoComplete='off' value={org} onChange={(e)=>{setOrg(e.target.value)}} placeholder='*Organization' id='org' required minLength={3} maxLength={50} />
+              <input type="text" name="org" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80 placeholder-gray-500 dark:placeholder-gray-200' autoComplete='off' value={org} onChange={(e)=>{setOrg(e.target.value)}} placeholder='*Organization' id='org' required minLength={3} maxLength={50} />
             </div>
             <div className="flex flex-col gap-2 w-full md:w-1/3">
               <label className="visuallyHidden" htmlFor="message">Message</label>
-              <textarea autoComplete='off' className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80' rows={ 4 } value={message} onChange={(e)=>{setMessage(e.target.value)}} placeholder="*Message" id='message' required minLength={3} maxLength={600}>
+              <textarea autoComplete='off' name="message" className='dark:bg-gray-800 rounded dark:text-white bg-white/80 dark:bg-gray-800/80 placeholder-gray-500 dark:placeholder-gray-200' rows={ 4 } value={message} onChange={(e)=>{setMessage(e.target.value)}} placeholder="*Message" id='message' required minLength={3} maxLength={600}>
               </textarea>
             </div>
           </div>
