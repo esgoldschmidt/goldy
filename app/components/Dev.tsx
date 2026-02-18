@@ -117,7 +117,7 @@ function Dev({}: Props) {
             <Image
               src={p.cardImage}
               width={240}
-              height={312}
+              height={132}
               alt={`${p.title} Card`}
               className='m-3 outline-none shadow'
             />
