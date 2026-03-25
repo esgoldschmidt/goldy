@@ -6,7 +6,7 @@ type Props = {};
 function Resume2({}: Props) {
   const [showInlineMobile, setShowInlineMobile] = useState(false);
 
-  const pdfUrl = '/resources/2026_ESG_Resume.pdf';
+  const pdfUrl = '/resources/2026_ESG_Resume_1.pdf';
 
   return (
     <section id="resume" className="w-full px-4 pt-8 scroll-mt-2">

@@ -1,3 +1,6 @@
+// Goldy - Portfolio
+// app/components/Dev.tsx
+
 'use client'
 
 import React, { useMemo, useState } from 'react'
@@ -18,6 +21,7 @@ type Project = {
   proof?: { label: string; bullets: string[] }[] // used to show DFS proof inside EZFood
   cardImage: string
   modalImage?: string
+  demoVideo?: string
   links?: { label: string; href: string; tone?: 'primary' | 'secondary' }[]
 }
 
@@ -51,8 +55,12 @@ function Dev({}: Props) {
           },
         ],
         cardImage: '/resources/cardEZFood.png', // create or reuse a placeholder
-        modalImage: '/resources/moreEZFood.png', // optional
-        links: [{ label: 'Visit ezfoodservice.io', href: 'https://ezfoodservice.io', tone: 'primary' }],
+        demoVideo: '/resources/EZFoodService_Demo_3_26.mp4',
+        modalImage: undefined, // optional
+        links: [
+          { label: 'Watch Demo', href: '/resources/EZFoodService_Demo_3_26.mp4', tone: 'primary' },
+          { label: 'Visit ezfoodservice.io', href: 'https://ezfoodservice.io', tone: 'secondary' },
+        ],
       },
       {
         id: 'goldylocks',
@@ -114,13 +122,21 @@ function Dev({}: Props) {
             role='button'
             tabIndex={0}
           >
-            <Image
-              src={p.cardImage}
-              width={240}
-              height={132}
-              alt={`${p.title} Card`}
-              className='m-3 outline-none shadow'
-            />
+            <div className='relative m-3 inline-block'>
+              <Image
+                src={p.cardImage}
+                width={240}
+                height={132}
+                alt={`${p.title} Card`}
+                className='outline-none shadow'
+              />
+
+              {p.id === 'ezfood' ? (
+                <span className='absolute right-2 top-2 rounded-full bg-gold px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-black shadow'>
+                  Demo
+                </span>
+              ) : null}
+            </div>
           </div>
         ))}
       </Slider>
@@ -194,11 +210,21 @@ function Dev({}: Props) {
                   </div>
                 ) : null}
 
-                {openProject.modalImage ? (
+                {openProject.demoVideo ? (
+                  <video
+                    controls
+                    autoPlay
+                    muted
+                    className="mt-2 w-full rounded shadow"
+                  >
+                    <source src={openProject.demoVideo} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : openProject.modalImage ? (
                   <img
                     src={openProject.modalImage}
                     alt={`${openProject.title} details`}
-                    className='mt-2 w-full object-cover object-top'
+                    className="mt-2 w-full object-cover object-top"
                   />
                 ) : null}
               </div>
